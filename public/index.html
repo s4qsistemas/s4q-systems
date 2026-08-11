@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="page.title">s4q systems | Integration and Modernization Consulting</title>
+  <link href="/favicon.png" rel="shortcut icon" type="image/x-icon">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #020617;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(2, 6, 23, .9);
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 24px;
+      border-bottom: 1px solid #1e293b;
+      z-index: 10;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    nav a {
+      margin-left: 18px;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    #lang-switcher span {
+      margin-left: 12px;
+      cursor: pointer;
+    }
+
+    #lang-switcher span.active {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    h1,
+    h2 {
+      color: white;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: var(--muted);
+      border-top: 1px solid #1e293b;
+    }
+
+    /* Contenedor del fondo (oscurece la pantalla) */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      display: none;
+      /* Oculto por defecto */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Caja del modal */
+    .modal-content-custom {
+      background: var(--panel);
+      width: 90%;
+      max-width: 500px;
+      border-radius: 12px;
+      border: 1px solid #1e293b;
+      padding: 24px;
+      position: relative;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .modal-header-custom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-header-custom h5 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--accent);
+    }
+
+    .close-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    /* Estilos del formulario */
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 12px;
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: 6px;
+      color: white;
+      font-family: inherit;
+    }
+
+    .btn-send {
+      width: 100%;
+      padding: 12px;
+      background: var(--accent);
+      color: #020617;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn-send:hover {
+      opacity: 0.9;
+    }
+
+    /* Clase para mostrar el modal */
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    /* Clase para mostrar icons redes */
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      /* Apila el texto del footer y los iconos */
+      align-items: center;
+      /* Centra todo el contenido */
+      padding: 20px;
+      gap: 10px;
+      /* Espacio entre el texto y los iconos */
+    }
+
+    .footer-socials a {
+      text-decoration: none;
+      color: inherit;
+      /* Toma el color del texto de tu web */
+      margin: 0 10px;
+      transition: opacity 0.3s;
+    }
+
+    .footer-socials a:hover {
+      opacity: 0.7;
+      /* Efecto visual al pasar el mouse */
+    }
+
+    .material-symbols-outlined {
+      font-size: 24px;
+      /* Ajusta el tamaño según necesites */
+    }
+  </style>
+
+  <!-- Google Icons -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">(function () { emailjs.init("kIwIM3vhDCyxl_9Fi"); })();</script>
+</head>
+
+<body>
+
+  <header>
+    <img src="logoS4q.png" alt="s4q sistemas">
+    <nav>
+      <a onclick="go('home')" data-i18n="nav.home"></a>
+      <a onclick="go('services')" data-i18n="nav.services"></a>
+      <a onclick="go('method')" data-i18n="nav.method"></a>
+      <a onclick="go('tech')" data-i18n="nav.tech"></a>
+      <a onclick="go('contact')" data-i18n="nav.contact"></a>
+      <span id="lang-switcher"></span>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h1 data-i18n="hero.title"></h1>
+    <p data-i18n="hero.subtitle"></p>
+  </section>
+
+  <section id="services">
+    <h2 data-i18n="services.title"></h2>
+    <div class="grid">
+      <div class="card">
+        <h3 data-i18n="services.diagnosis.title"></h3>
+        <p data-i18n="services.diagnosis.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="services.api.title"></h3>
+        <p data-i18n="services.api.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="services.modern.title"></h3>
+        <p data-i18n="services.modern.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="services.migration.title"></h3>
+        <p data-i18n="services.migration.text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2 data-i18n="method.title"></h2>
+    <div class="grid">
+      <div class="card">
+        <h3 data-i18n="method.step1.title"></h3>
+        <p data-i18n="method.step1.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="method.step2.title"></h3>
+        <p data-i18n="method.step2.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="method.step3.title"></h3>
+        <p data-i18n="method.step3.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="method.step4.title"></h3>
+        <p data-i18n="method.step4.text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech">
+    <h2 data-i18n="tech.title"></h2>
+    <div class="grid">
+      <div class="card">
+        <h3 data-i18n="tech.node.title"></h3>
+        <p data-i18n="tech.node.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tech.sql.title"></h3>
+        <p data-i18n="tech.sql.text"></p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="tech.legacy.title"></h3>
+        <p data-i18n="tech.legacy.text"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 data-i18n="contact.title"></h2>
+    <p data-i18n="contact.text"></p>
+    <p data-i18n="contact.info"></p>
+    <span>
+      <a onclick="openModal()"
+        style="cursor: pointer; text-decoration: none; display: inline-flex; align-items: center;">
+        <span class="material-symbols-outlined">description</span>
+        <span>
+          <p data-i18n="contact.form"></p>
+        </span>
+      </a>
+    </span>
+  </section>
+
+  <!--
+  <footer data-i18n="footer"></footer>
+-->
+
+  <div class="footer-container">
+
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/diego-alvial-9bb631239/" target="_blank" title="LinkedIn">
+        <span class="material-symbols-outlined">share_reviews</span>
+      </a>
+      <a href="https://github.com/s4qsistemas" target="_blank" title="GitHub">
+        <span class="material-symbols-outlined">code</span>
+      </a>
+    </div>
+
+    <footer data-i18n="footer"></footer>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="myModal">
+    <div class="modal-content-custom">
+      <div class="modal-header-custom">
+        <h5 data-i18n="modal.title"></h5>
+        <button type="button" class="close-btn" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body-custom">
+        <form id="contactForm">
+          <div class="input-group">
+            <label data-i18n="modal.name"></label>
+            <input type="text" id="fullName" required>
+          </div>
+          <div class="input-group">
+            <label data-i18n="modal.email"></label>
+            <input type="email" id="email_id" required>
+          </div>
+          <div class="input-group">
+            <label data-i18n="modal.phone"></label>
+            <input type="text" id="phone" required>
+          </div>
+          <div class="input-group">
+            <label data-i18n="modal.message"></label>
+            <textarea rows="4" id="message" required></textarea>
+          </div>
+          <button id="enviar" type="button" class="btn-send"
+            style="display: flex; justify-content: center; align-items: center; gap: 8px;">
+            <span data-i18n="modal.button"></span>
+            <img id="loadingIcon" src="ajax-loader.gif" style="display: none; width: 20px; height: 20px;"
+              alt="Enviando...">
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function go(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
+
+    // Función para abrir el modal
+    function openModal() {
+      document.getElementById('myModal').classList.add('active');
+    }
+
+    // Función para cerrar el modal
+    function closeModal() {
+      document.getElementById('myModal').classList.remove('active');
+    }
+
+    // Cerrar si el usuario hace clic fuera de la caja blanca
+    window.onclick = function (event) {
+      let modal = document.getElementById('myModal');
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+
+    // Función para enviar formulario de contacto
+    document.getElementById('enviar').addEventListener('click', function () {
+      var btnEnviar = document.getElementById('enviar');
+      var loadingIcon = document.getElementById('loadingIcon');
+      btnEnviar.disabled = true;
+      loadingIcon.style.display = 'block';
+
+      // Recopilación de parámetros
+      var templateParams = {
+        from_name: document.getElementById("fullName").value,
+        email_id: document.getElementById("email_id").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+      };
+
+      // Envío con EmailJS
+      emailjs.send('service_v6kwn69', 'template_v3g3o9d', templateParams)
+        .then(function (response) {
+          alert('Ok');
+
+          document.getElementById('myModal').classList.remove('active');
+
+          const form = document.querySelector('#myModal form');
+          if (form) {
+            form.reset();
+          }
+
+          btnEnviar.disabled = false;
+          loadingIcon.style.display = 'none';
+        }, function (error) {
+          alert('FAILED...', error);
+          console.log('FAILED...', error);
+          btnEnviar.disabled = false;
+          loadingIcon.style.display = 'none';
+        });
+    });
+  </script>
+  <script src="js/i18n.js"></script>
+</body>
+
+</html>

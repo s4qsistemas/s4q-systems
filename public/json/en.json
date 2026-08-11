@@ -1,0 +1,53 @@
+{
+  "nav.home":"Home",
+  "nav.services":"Services",
+  "nav.method":"Methodology",
+  "nav.tech":"Expertise",
+  "nav.contact":"Contact",
+
+  "hero.title":"Systems Integration and Modernization Consulting",
+  "hero.subtitle":"At s4q systems we help companies evolve existing systems, integrate them through modern APIs and update them without disrupting operations.",
+
+  "services.title":"Services",
+  "services.diagnosis.title":"System Diagnosis",
+  "services.diagnosis.text":"Technical analysis of existing systems, databases, flows, and risks.",
+  "services.api.title":"API Integration",
+  "services.api.text":"Design and implementation of REST APIs with Node.js as middleware.",
+  "services.modern.title":"Progressive Modernization",
+  "services.modern.text":"Technological updates without total rewrites or interruptions.",
+  "services.migration.title":"Migrations and Updates",
+  "services.migration.text":"Support in version migrations, controlled refactor, and optimization.",
+
+  "method.title":"How We Work",
+  "method.step1.title":"1. Analysis",
+  "method.step1.text":"We understand the system before writing a single line of code.",
+  "method.step2.title":"2. Design",
+  "method.step2.text":"We define clear, secure, and maintainable integrations.",
+  "method.step3.title":"3. Implementation",
+  "method.step3.text":"We develop robust and traceable backend solutions.",
+  "method.step4.title":"4. Documentation",
+  "method.step4.text":"We deliver knowledge, not dependency.",
+
+  "tech.title":"Technical Expertise",
+  "tech.node.title":"Node.js",
+  "tech.node.text":"REST APIs, middlewares, integration services, and workflow control.",
+  "tech.sql.title":"SQL Server",
+  "tech.sql.text":"Migrations, optimization, logic refactoring, and data continuity.",
+  "tech.legacy.title":"Legacy Systems",
+  "tech.legacy.text":"Coexistence with existing systems without breaking operations.",
+
+  "contact.title":"Contact",
+  "contact.text":"If your company needs to integrate, modernize, or evolve its systems, let's talk.",
+  "contact.info":"📧 sigm4q@gmail.cl<br>🌐 s4q systems",
+  "contact.form":" form",
+
+  "modal.title":"Contact-Module",
+  "modal.name":"Name",
+  "modal.email":"Email",
+  "modal.phone":"Phone",
+  "modal.message":"Message",
+  "modal.button":"Send",
+  "modal.response":"Message sent",
+
+  "footer":"© 2026 s4q systems · Systems Integration and Modernization Consulting"
+}

@@ -1,0 +1,53 @@
+{
+  "nav.home":"Startseite",
+  "nav.services":"Dienstleistungen",
+  "nav.method":"Methodik",
+  "nav.tech":"Fachwissen",
+  "nav.contact":"Kontakt",
+
+  "hero.title":"Beratung für Systemintegration und Modernisierung",
+  "hero.subtitle":"Wir bei s4q systems helfen Unternehmen, bestehende Systeme weiterzuentwickeln, sie über moderne APIs zu integrieren und zu aktualisieren, ohne den Betrieb zu unterbrechen.",
+
+  "services.title":"Dienstleistungen",
+  "services.diagnosis.title":"Systemdiagnose",
+  "services.diagnosis.text":"Technische Analyse bestehender Systeme, Datenbanken, Abläufe und Risiken.",
+  "services.api.title":"API-Integration",
+  "services.api.text":"Design und Implementierung von REST APIs mit Node.js als Middleware.",
+  "services.modern.title":"Progressive Modernisierung",
+  "services.modern.text":"Technologische Aktualisierung ohne vollständige Neuschreibung oder Unterbrechungen.",
+  "services.migration.title":"Migrationen und Updates",
+  "services.migration.text":"Unterstützung bei Versionsmigrationen, kontrolliertem Refactoring und Optimierung.",
+
+  "method.title":"Wie wir arbeiten",
+  "method.step1.title":"1. Analyse",
+  "method.step1.text":"Wir verstehen das System, bevor wir eine einzige Zeile Code schreiben.",
+  "method.step2.title":"2. Design",
+  "method.step2.text":"Wir definieren klare, sichere und wartbare Integrationen.",
+  "method.step3.title":"3. Implementierung",
+  "method.step3.text":"Wir entwickeln robuste und nachvollziehbare Backend-Lösungen.",
+  "method.step4.title":"4. Dokumentation",
+  "method.step4.text":"Wir liefern Wissen, keine Abhängigkeit.",
+
+  "tech.title":"Technische Fachkompetenz",
+  "tech.node.title":"Node.js",
+  "tech.node.text":"REST APIs, Middleware, Integrationsdienste und Workflow-Steuerung.",
+  "tech.sql.title":"SQL Server",
+  "tech.sql.text":"Migrationen, Optimierung, Logik-Refactoring und Datenkontinuität.",
+  "tech.legacy.title":"Legacy-Systeme",
+  "tech.legacy.text":"Koexistenz mit bestehenden Systemen ohne Betriebsunterbrechung.",
+
+  "contact.title":"Kontakt",
+  "contact.text":"Wenn Ihr Unternehmen seine Systeme integrieren, modernisieren oder weiterentwickeln möchte, sprechen wir darüber.",
+  "contact.info":"📧 sigm4q@gmail.cl<br>🌐 s4q systems",
+  "contact.form":" formular",
+
+  "modal.title":"Kontakt-Modul",
+  "modal.name":"Name",
+  "modal.email":"E-Mail",
+  "modal.phone":"Telefon",
+  "modal.message":"Nachricht",
+  "modal.button":"Senden",
+  "modal.response":"Nachricht gesendet",
+
+  "footer":"© 2026 s4q systems · Beratung für Systemintegration und Modernisierung"
+}

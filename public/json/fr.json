@@ -1,0 +1,53 @@
+{
+  "nav.home":"Accueil",
+  "nav.services":"Services",
+  "nav.method":"Méthodologie",
+  "nav.tech":"Expertise",
+  "nav.contact":"Contact",
+
+  "hero.title":"Consultation en intégration et modernisation des systèmes",
+  "hero.subtitle":"Chez s4q systems, nous aidons les entreprises à faire évoluer les systèmes existants, les intégrer via des API modernes et les mettre à jour sans interrompre les opérations.",
+
+  "services.title":"Services",
+  "services.diagnosis.title":"Diagnostic des systèmes",
+  "services.diagnosis.text":"Analyse technique des systèmes existants, bases de données, flux et risques.",
+  "services.api.title":"Intégration via APIs",
+  "services.api.text":"Conception et mise en œuvre d’APIs REST avec Node.js comme middleware.",
+  "services.modern.title":"Modernisation progressive",
+  "services.modern.text":"Mise à jour technologique sans réécritures totales ni interruptions.",
+  "services.migration.title":"Migrations et mises à jour",
+  "services.migration.text":"Support pour les migrations de versions, refactorisation contrôlée et optimisation.",
+
+  "method.title":"Comment nous travaillons",
+  "method.step1.title":"1. Analyse",
+  "method.step1.text":"Nous comprenons le système avant d’écrire une seule ligne de code.",
+  "method.step2.title":"2. Conception",
+  "method.step2.text":"Nous définissons des intégrations claires, sécurisées et maintenables.",
+  "method.step3.title":"3. Mise en œuvre",
+  "method.step3.text":"Nous développons des solutions backend robustes et traçables.",
+  "method.step4.title":"4. Documentation",
+  "method.step4.text":"Nous livrons le savoir, pas la dépendance.",
+
+  "tech.title":"Expertise technique",
+  "tech.node.title":"Node.js",
+  "tech.node.text":"APIs REST, middlewares, services d’intégration et contrôle du flux.",
+  "tech.sql.title":"SQL Server",
+  "tech.sql.text":"Migrations, optimisation, refactorisation de la logique et continuité des données.",
+  "tech.legacy.title":"Systèmes Legacy",
+  "tech.legacy.text":"Coexistence avec les systèmes existants sans interrompre le fonctionnement.",
+
+  "contact.title":"Contact",
+  "contact.text":"Si votre entreprise a besoin d’intégrer, moderniser ou faire évoluer ses systèmes, discutons-en.",
+  "contact.info":"📧 sigm4q@gmail.cl<br>🌐 s4q systems",
+  "contact.form":" formulaire",
+
+  "modal.title":"Module de Contact",
+  "modal.name":"Nom",
+  "modal.email":"E-mail",
+  "modal.phone":"Téléphone",
+  "modal.message":"Message",
+  "modal.button":"Envoyer",
+  "modal.response":"Message envoyé",
+
+  "footer":"© 2026 s4q systems · Consultation en intégration et modernisation des systèmes"
+}
